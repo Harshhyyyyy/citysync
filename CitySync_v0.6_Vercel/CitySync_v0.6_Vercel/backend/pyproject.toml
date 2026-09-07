@@ -1,0 +1,14 @@
+[project]
+name = "citysync-api"
+version = "0.6.0"
+description = "CitySync GIS urban infrastructure decision-support API"
+requires-python = ">=3.13,<3.15"
+dependencies = [
+  "fastapi>=0.117.1,<1",
+  "uvicorn[standard]>=0.36,<1",
+  "sqlalchemy>=2.0.36,<3",
+  "psycopg[binary]>=3.3.0,<4",
+  "geoalchemy2>=0.16,<1",
+  "pydantic>=2.11,<3",
+  "python-multipart>=0.0.20,<1"
+]

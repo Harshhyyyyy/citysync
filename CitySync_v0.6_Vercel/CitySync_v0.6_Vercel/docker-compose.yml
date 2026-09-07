@@ -1,0 +1,15 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    container_name: citysync-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: citysync
+      POSTGRES_USER: citysync
+      POSTGRES_PASSWORD: citysync
+    ports:
+      - "5432:5432"
+    volumes:
+      - citysync_pgdata:/var/lib/postgresql/data
+volumes:
+  citysync_pgdata:
